@@ -4,7 +4,7 @@ const db = require('./config/db');
 
 app.db = db;
 
-var porta = process.env.PORT || 3600;
+var porta = process.env.PORT || 8080;
 
 consign()
     .then('./config/middlewares.js')
