@@ -3,11 +3,12 @@
 require('dotenv').config();
 
 module.exports = {
-  development: {
+  //development: {
+    /*
     client: 'postgresql',
     connection: {
       database: 'carteira',
-      user: 'postgres',
+      user:     'postgres',
       password: '123456'
     },
     pool: {
@@ -17,17 +18,13 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     }
-  },
-
-  production: {
+  //},
+  */
+  //production: {
     client: 'pg',
     connection: process.env.DB_URL,
-    pool: {
-      min: 2,
-      max: 10
-    },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: 'knex_migrations',
     }
-  }
+  //},
 };
