@@ -4,12 +4,14 @@ const db = require('./config/db');
 
 app.db = db;
 
+var porta = process.env.PORT || 3600;
+
 consign()
     .then('./config/middlewares.js')
     .then('./api')
     .then('./config/routes.js')
     .into(app)
 
-app.listen(3600, () => {
+app.listen(porta, () => {
     console.log("Backend executando na porta 3600...");
 });
